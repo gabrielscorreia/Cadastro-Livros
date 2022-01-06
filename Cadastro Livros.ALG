@@ -27,9 +27,15 @@ inicio
               caso 1
                    CadastrarLivros
               caso 2
+                   limpatela
                    ListarLivros
               caso 3
                    interrompa
+              outrocaso
+                   limpatela
+                   escreval ("Opção inválida, tente de novo.")
+                   Menu
+
       fimescolha
 fimprocedimento
 
@@ -42,6 +48,8 @@ inicio
       escreva ("Digite quantos livros deseja cadastrar: ")
       leia (qntdLivros)
       escreval
+      
+      limpatela
 
       para i de 1 ate qntdLivros faca
          escreval ("*******************")
@@ -56,8 +64,13 @@ inicio
          leia(livros[i].nomeEditora)
          escreva ("Ano de lançamento: ")
          leia(livros[i].ano)
-         escreval
+         limpatela
       fimpara
+      
+      escreval ("Livro(s) cadastrado(s) com sucesso!")
+      escreval ("Presione <ENTER> para retornar ao menu")
+      leia (pausar)
+      limpatela
       
       Menu
 fimprocedimento
@@ -79,6 +92,10 @@ inicio
            escreval ("Ano de lançamento:",livros[i].ano)
            escreval
       fimpara
+      
+      escreva ("Pressione <ENTER> para retornar ao menu.")
+      leia (pausar)
+      limpatela
 
 Menu
 
@@ -89,6 +106,7 @@ Var
 // Seção de Declarações das variáveis 
 livros: vetor [1..20] de cad_livros
 qntdLivros: inteiro
+pausar: caracter
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
